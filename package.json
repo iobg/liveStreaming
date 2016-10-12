@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "desktop-screenshot": "^0.1.1",
     "ffmpeg": "0.0.4",
+    "node-screenshot": "^0.1.1",
     "screen-recorder": "^1.4.0",
     "screencap": "0.0.6"
   }
