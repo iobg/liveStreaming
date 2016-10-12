@@ -15,14 +15,14 @@ var fs = require('fs')
 
 
 let watch=fs.watchFile('new.mp4',(curr,prev)=>{
-	console.log(curr)
+	if(curr.size!=0){
+		let read = fs.createReadStream('new.mp4')
+		read.pipe(process.stdout)
+	}
+	
 })
 
 
-
-
-
-	
 setTimeout(function() {
   movie.stop()
   fs.unlink('new.mp4')
