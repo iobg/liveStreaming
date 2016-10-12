@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "screen-recorder": "^1.4.0"
+    "ffmpeg": "0.0.4",
+    "screen-recorder": "^1.4.0",
+    "screencap": "0.0.6"
   }
 }
