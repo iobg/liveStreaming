@@ -11,6 +11,8 @@
   "dependencies": {
     "desktop-screenshot": "^0.1.1",
     "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "^2.1.0",
+    "jsmpeg": "^1.0.0",
     "node-screenshot": "^0.1.1",
     "screen-recorder": "^1.4.0",
     "screencap": "0.0.6"

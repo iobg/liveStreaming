@@ -1,24 +1,16 @@
-'use strict'
+const ffmpeg = require('fluent-ffmpeg')
+const command =ffmpeg()
 const fs = require('fs')
-var exec = require('child_process').exec;
+var path = require('path')
+const exec = require('child_process').exec
 
-const getScreenshot=()=>{
-	return new Promise((resolve,reject)=>{
-		exec('screencapture screenshot.png', function (err){
-			if(err){
-				console.log(err)
-				reject()
-						}
-						resolve()
-					})
 
-				})
-			}
-			
-getScreenshot().then(()=>{
-	let read = fs.createReadStream('screenshot.png')
-		read.pipe(process.stdout)
-})
-		
-
+const read = fs.createReadStream('out.mpg')
+fs.watch('out.mpg', (eventType, filename) => {
+  if (filename) {
+    read.pipe(process.stdout)
+  } else {
+    console.log('file not found');
+  }
+});
 
